@@ -1,8 +1,8 @@
 # time_series
 This repository records learning in time series forecasting.
 
-
-
+## 🤖 TSM
+The **TSM(time serious module)** package is an implementation of time series data preprocessing and time model building, referencing other open-source packages.
 
 ## Repository
 

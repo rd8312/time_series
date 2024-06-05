@@ -1,5 +1,7 @@
 # Temporal Convolutional Networks
 
+## tcn.py
+- Reference: [PyTorch-TCN](https://github.com/paul-krug/pytorch-tcn)
 
 ### 說明擴張卷積層數(Dilated convolutions layers, $g$)的公式推導
 

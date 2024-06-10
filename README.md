@@ -1,6 +1,10 @@
 # time_series
 This repository records learning in time series forecasting.
 
+**Multivariate Time Series**  
+A multivariate time series consists of multiple time series variables, where each variable depends not only on its own past values but also on the past values of other variables.
+- 👉 [multivariate time serious](multivariate_ts.ipynb)
+
 ## 🤖 TSM
 The **TSM(time serious module)** package is an implementation of time series data preprocessing and time model building, referencing other open-source packages.
 

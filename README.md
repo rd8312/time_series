@@ -1,6 +1,11 @@
 # time_series
 This repository records learning in time series forecasting.
 
+**Time Series processing**
+
+Smoothing dampens fluctuations in raw data to reveal clearer patterns for analysis and forecasting.
+- 👉 [smoothing](smoothing.ipynb)
+
 **Multivariate Time Series**  
 A multivariate time series consists of multiple time series variables, where each variable depends not only on its own past values but also on the past values of other variables.
 - 👉 [multivariate time serious](multivariate_ts.ipynb)

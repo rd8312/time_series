@@ -23,46 +23,27 @@
 
 2. **接受域的計算**：
    - 當我們有 $g$ 層卷積時，接受域大小可以表示為：
-     $$
-     R(g) = q + (q-1) \cdot \sum_{j=0}^{g-1} b^j
-     $$
+     $R(g) = q + (q-1) \cdot \sum_{j=0}^{g-1} b^j$
    - 求和項 $\sum_{j=0}^{g-1} b^j$ 是一個等比數列，可以用公式計算：
-     $$
-     \sum_{j=0}^{g-1} b^j = \frac{1*(b^g - 1)}{b - 1}
-     $$
+     $\sum_{j=0}^{g-1} b^j = \frac{1*(b^g - 1)}{b - 1}$
    - 將其代入接受域公式：
-     $$
-     R(g) = q + (q-1) \cdot \frac{b^g - 1}{b - 1}
-     $$
+     $R(g) = q + (q-1) \cdot \frac{b^g - 1}{b - 1}$
    - 使用公式計算，如下圖:
-  
-        ![dilation_convolution](dilation_convolution.png)
+     ![dilation_convolution](../pictures/dilation_convolution.png)
 
 3. **確保接受域覆蓋整個輸入序列**：
    - 我們希望接受域覆蓋整個輸入序列，即 $R(g) \geq n$：
-     $$
-     q + (q-1) \cdot \frac{b^g - 1}{b - 1} \geq n
-     $$
+     $q + (q-1) \cdot \frac{b^g - 1}{b - 1} \geq n$
    - 化簡得：
-     $$
-     (q-1) \cdot \frac{b^g - 1}{b - 1} \geq n - q
-     $$
-     $$
-     b^g - 1 \geq \frac{(n-q)(b-1)}{q-1}
-     $$
-     $$
-     b^g \geq \frac{(n-q)(b-1)}{q-1} + 1
-     $$
+     $(q-1) \cdot \frac{b^g - 1}{b - 1} \geq n - q$
+     $b^g - 1 \geq \frac{(n-q)(b-1)}{q-1}$
+     $b^g \geq \frac{(n-q)(b-1)}{q-1} + 1$
 
 4. **取對數並解出 $g$**：
    - 兩邊取對數：
-     $$
-     g \geq \log_b \left( \frac{(n-q)(b-1)}{q-1} + 1 \right)
-     $$
+     $g \geq \log_b \left( \frac{(n-q)(b-1)}{q-1} + 1 \right)$
    - 為了保證 $g$ 是整數，取上限：
-     $$
-     g = \left\lceil \log_b \left( \frac{(n-1)(b-1)}{q-1} + 1 \right) \right\rceil
-     $$
+     $g = \left\lceil \log_b \left( \frac{(n-1)(b-1)}{q-1} + 1 \right) \right\rceil$
 
 即為公式的推導過程，確保我們使用 $g$ 層擴張卷積層可以有效地覆蓋整個輸入序列
 

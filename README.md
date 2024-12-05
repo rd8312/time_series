@@ -18,6 +18,7 @@ The **TSM(time serious module)** package is an implementation of time series dat
 ### 🔧 feature engineering :
 
 - [tsflex](https://github.com/predict-idlab/tsflex/tree/main?tab=readme-ov-file) : a toolkit for flexible time series processing & feature extraction, that is efficient and makes few assumptions about sequence data.
+- [ClaSPy](https://github.com/ermshaua/claspy): A Python package for time series segmentation
 
 
 ### 📚 time series package :
